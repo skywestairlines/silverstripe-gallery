@@ -3,11 +3,11 @@ name: gallery
 ---
 
 Image:
-  extensions: 
+  extensions:
     - 'Gallery_ImageExtension'
 GalleryPage:
-  extensions: 
+  extensions:
     - 'Gallery_PageExtension'
-GalleryPage_Controller:
-  extensions: 
+GalleryPageController:
+  extensions:
     - 'Fancybox2_ControllerExtension'

@@ -1,6 +1,7 @@
 <?php
 
 use SilverStripe\ORM\DataExtension;
+use SilverStripe\Control\Controller;
 use SilverStripe\Forms\TextareaField;
 
 class Gallery_ImageExtension extends DataExtension
