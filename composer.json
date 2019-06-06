@@ -1,25 +1,22 @@
 {
-	"name": "silverstripe/gallery",
-	"description": "SilverStripe Gallery Module",
-	"type": "silverstripe-module",
-	"keywords": ["silverstripe","image gallery","gallery"],
-	"authors": [
-		{
-			"name": "Hilkiah Makemo",
-			"email": "hilmak01@gmail.com"
-		}
-	],
-	"require": 
-	{
-		"silverstripe/framework": "^4.0"
-	},
-	"require-dev": {
-		"phpunit/PHPUnit": "^5.7"
-	},
-	"extra": {
-		"expose": [
-		    "client"
-		],
-		"installer-name": "gallery"
-    	}
+    "name": "silverstripe/gallery",
+    "description": "SilverStripe Gallery Module",
+    "type": "library",
+    "keywords": ["silverstripe", "image gallery", "gallery"],
+    "authors": [{
+        "name": "Hilkiah Makemo",
+        "email": "hilmak01@gmail.com"
+    }],
+    "require": {
+        "silverstripe/framework": "^4.0"
+    },
+    "require-dev": {
+        "phpunit/PHPUnit": "^5.7"
+    },
+    "extra": {
+        "expose": [
+            "client"
+        ],
+        "installer-name": "gallery"
+    }
 }
