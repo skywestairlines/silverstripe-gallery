@@ -1,6 +1,7 @@
 <?php
 
 
+use SilverStripe\Assets\Image;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\ORM\DataExtension;
 
@@ -8,7 +9,7 @@ class Gallery_PageExtension extends DataExtension
 {
 
     private static $many_many = array(
-        'Images' => 'Image'
+        'Images' => Image::class
     );
 
     public function updateCMSFields(FieldList $fields)
