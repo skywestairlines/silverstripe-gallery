@@ -1,5 +1,5 @@
 {
-	"name": "skywestairlines/gallery",
+	"name": "skywest/ss-gallery",
 	"description": "SilverStripe Gallery Module",
 	"type": "silverstripe-module",
 	"keywords": ["silverstripe","image gallery","gallery"],
