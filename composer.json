@@ -1,5 +1,5 @@
 {
-    "name": "silverstripe/ss-gallery",
+    "name": "skywest/ss-gallery",
     "description": "SilverStripe Gallery Module",
     "type": "library",
     "keywords": ["silverstripe", "image gallery", "gallery"],
