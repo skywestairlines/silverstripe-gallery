@@ -1,5 +1,5 @@
 {
-    "name": "silverstripe/gallery",
+    "name": "silverstripe/ss-gallery",
     "description": "SilverStripe Gallery Module",
     "type": "library",
     "keywords": ["silverstripe", "image gallery", "gallery"],
