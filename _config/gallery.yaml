@@ -4,10 +4,10 @@ name: gallery
 
 Image:
   extensions:
-    - 'Gallery_ImageExtension'
-GalleryPage:
+    - SkyWest\Gallery\Extn\Gallery_ImageExtension
+SkyWest\Gallery\Pages\GalleryPage:
   extensions:
-    - 'Gallery_PageExtension'
-GalleryPageController:
+    - SkyWest\Gallery\Extn\Gallery_PageExtension
+SkyWest\Gallery\Pages\GalleryPageController:
   extensions:
-    - 'Fancybox2_ControllerExtension'
+    - SkyWest\Gallery\Extn\Fancybox2_ControllerExtension
