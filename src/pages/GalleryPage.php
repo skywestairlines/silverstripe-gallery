@@ -1,4 +1,6 @@
 <?php
 
-class GalleryPage extends Page
+namespace SkyWest\Gallery\Pages;
+
+class GalleryPage extends \Page
 { }

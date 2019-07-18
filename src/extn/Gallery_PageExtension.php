@@ -1,5 +1,6 @@
 <?php
 
+namespace SkyWest\Gallery\Extn;
 
 use SilverStripe\Assets\Image;
 use SilverStripe\Forms\FieldList;

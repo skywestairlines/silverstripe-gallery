@@ -1,5 +1,7 @@
 <?php
 
+namespace SkyWest\Gallery\Models;
+
 use SilverStripe\Forms\Form;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 

@@ -1,5 +1,7 @@
 <?php
 
+namespace SkyWest\Gallery\Extn;
+
 use SilverStripe\ORM\DataExtension;
 use SilverStripe\Control\Controller;
 use SilverStripe\Forms\TextareaField;

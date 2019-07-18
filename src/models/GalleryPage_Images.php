@@ -1,5 +1,7 @@
 <?php
 
+namespace SkyWest\Gallery\Models;
+
 use SilverStripe\ORM\DataObject;
 
 class GalleryPage_Images extends DataObject

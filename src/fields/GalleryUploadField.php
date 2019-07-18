@@ -1,5 +1,6 @@
 <?php
 
+namespace SkyWest\Gallery\Fields;
 
 use SilverStripe\Assets\File;
 use SilverStripe\Core\Convert;
