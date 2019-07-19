@@ -20,7 +20,6 @@
     },
     "extra": {
         "expose": [
-            "client",
             "css",
             "images",
             "javascript"
