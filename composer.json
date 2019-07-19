@@ -7,9 +7,6 @@
         "name": "Hilkiah Makemo",
         "email": "hilmak01@gmail.com"
     }],
-    "require": {
-        "silverstripe/framework": "^4.0"
-    },
     "autoload": {
         "psr-4": {
             "SkyWest\\Gallery\\": "src/"
@@ -20,9 +17,9 @@
     },
     "extra": {
         "expose": [
-            "css",
-            "images",
-            "javascript"
+            "client/css",
+            "client/images",
+            "client/javascript"
         ],
         "installer-name": "ss-gallery"
     }

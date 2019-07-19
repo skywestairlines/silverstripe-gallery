@@ -94,28 +94,28 @@ class GalleryUploadField extends UploadField
             $this->setConfig('allowedMaxFileNumber', 1);
         }
 
-        Requirements::javascript(THIRDPARTY_DIR . '/jquery/jquery.js');
-        Requirements::javascript(THIRDPARTY_DIR . '/jquery-ui/jquery-ui.js');
-        Requirements::javascript(THIRDPARTY_DIR . '/jquery-entwine/dist/jquery.entwine-dist.js');
+        // Requirements::javascript('skywest/ss-gallery: client/jquery/jquery.js');
+        Requirements::javascript('skywest/ss-gallery: client/jquery-ui/jquery-ui.js');
+        Requirements::javascript('skywest/ss-gallery: client/jquery-entwine/dist/jquery.entwine-dist.js');
         Requirements::javascript(FRAMEWORK_DIR . '/javascript/i18n.js');
         Requirements::javascript(FRAMEWORK_ADMIN_DIR . '/javascript/ssui.core.js');
 
         Requirements::combine_files('uploadfield.js', array(
-            THIRDPARTY_DIR . '/javascript-templates/tmpl.js',
-            THIRDPARTY_DIR . '/javascript-loadimage/load-image.js',
-            THIRDPARTY_DIR . '/jquery-fileupload/jquery.iframe-transport.js',
-            THIRDPARTY_DIR . '/jquery-fileupload/cors/jquery.xdr-transport.js',
-            THIRDPARTY_DIR . '/jquery-fileupload/jquery.fileupload.js',
-            THIRDPARTY_DIR . '/jquery-fileupload/jquery.fileupload-ui.js',
+            'skywest/ss-gallery: client/javascript-templates/tmpl.js',
+            'skywest/ss-gallery: client/javascript-loadimage/load-image.js',
+            'skywest/ss-gallery: client/jquery-fileupload/jquery.iframe-transport.js',
+            'skywest/ss-gallery: client/jquery-fileupload/cors/jquery.xdr-transport.js',
+            'skywest/ss-gallery: client/jquery-fileupload/jquery.fileupload.js',
+            'skywest/ss-gallery: client/jquery-fileupload/jquery.fileupload-ui.js',
             FRAMEWORK_DIR . '/javascript/UploadField_uploadtemplate.js',
             FRAMEWORK_DIR . '/javascript/UploadField_downloadtemplate.js',
             FRAMEWORK_DIR . '/javascript/UploadField.js',
         ));
 
-        Requirements::javascript(THIRDPARTY_DIR . '/jquery/jquery.js');
+        Requirements::javascript('skywest/ss-gallery: client/jquery/jquery.js');
         // Requirements::javascript('gallery/javascript/GalleryUploadField.js');
 
-        Requirements::css(THIRDPARTY_DIR . '/jquery-ui-themes/smoothness/jquery-ui.css'); // TODO hmmm, remove it?
+        Requirements::css('skywest/ss-gallery: client/jquery-ui-themes/smoothness/jquery-ui.css'); // TODO hmmm, remove it?
         Requirements::css(FRAMEWORK_DIR . '/css/UploadField.css');
         // Requirements::css('gallery/css/GalleryUploadField.css');
 
