@@ -112,12 +112,12 @@ class GalleryUploadField extends UploadField
             FRAMEWORK_DIR . '/javascript/UploadField.js',
         ));
 
-        Requirements::javascript('skywest/ss-gallery: client/jquery/jquery.js');
-        // Requirements::javascript('gallery/javascript/GalleryUploadField.js');
+        // Requirements::javascript('skywest/ss-gallery: client/jquery/jquery.js');
+        Requirements::javascript('skywest/ss-gallery: client/javascript/GalleryUploadField.js');
 
         Requirements::css('skywest/ss-gallery: client/jquery-ui-themes/smoothness/jquery-ui.css'); // TODO hmmm, remove it?
         Requirements::css(FRAMEWORK_DIR . '/css/UploadField.css');
-        // Requirements::css('gallery/css/GalleryUploadField.css');
+        Requirements::css('skywest/ss-gallery: client/css/GalleryUploadField.css');
 
         $allowedMaxFileNumber = $this->getAllowedMaxFileNumber();
         $config = array(

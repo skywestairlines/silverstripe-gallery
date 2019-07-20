@@ -5,6 +5,7 @@ namespace SkyWest\Gallery\Extn;
 use SilverStripe\Assets\Image;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\ORM\DataExtension;
+use SkyWest\Gallery\Fields\GalleryUploadField;
 
 class Gallery_PageExtension extends DataExtension
 {
@@ -25,8 +26,8 @@ class Gallery_PageExtension extends DataExtension
 
     public function OrderedImages()
     {
-
-        list($parentClass, $componentClass, $parentField, $componentField, $table) = $this->owner->many_many('Images');
+        dump($this->owner->manyMany(), $Images = array_pad($this->owner->manyMany('Images'), 5, null));
+        list($parentClass, $componentClass, $parentField, $componentField, $table) = $Images;
 
         return $this->owner->getManyManyComponents(
             'Images',

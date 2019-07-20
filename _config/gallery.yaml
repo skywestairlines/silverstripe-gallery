@@ -6,6 +6,8 @@ Image:
   extensions:
     - SkyWest\Gallery\Extn\Gallery_ImageExtension
 SkyWest\Gallery\Pages\GalleryPage:
+  many_many:
+
   extensions:
     - SkyWest\Gallery\Extn\Gallery_PageExtension
 SkyWest\Gallery\Pages\GalleryPageController:
