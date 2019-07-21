@@ -82,42 +82,43 @@ class GalleryUploadField extends UploadField
 
         $record = $this->getRecord();
         $name = $this->getName();
+        $configs = $this->config();
 
         // if there is a has_one relation with that name on the record and
         // allowedMaxFileNumber has not been set, it's wanted to be 1
         if (
             $record
             && $record->exists()
-            && $record->has_one($name)
-            && !$this->getConfig('allowedMaxFileNumber')
+            && $record->hasOne($name)
+            && !$configs->get('allowedMaxFileNumber')
         ) {
-            $this->setConfig('allowedMaxFileNumber', 1);
+            $configs->set('allowedMaxFileNumber', 1);
         }
 
         // Requirements::javascript('skywest/ss-gallery: client/jquery/jquery.js');
-        Requirements::javascript('skywest/ss-gallery: client/jquery-ui/jquery-ui.js');
-        Requirements::javascript('skywest/ss-gallery: client/jquery-entwine/dist/jquery.entwine-dist.js');
-        Requirements::javascript(FRAMEWORK_DIR . '/javascript/i18n.js');
-        Requirements::javascript(FRAMEWORK_ADMIN_DIR . '/javascript/ssui.core.js');
+        // Requirements::javascript('skywest/ss-gallery: client/jquery-ui/jquery-ui.js');
+        // Requirements::javascript('skywest/ss-gallery: client/jquery-entwine/dist/jquery.entwine-dist.js');
+        // Requirements::javascript('silverstripe/framework: /javascript/i18n.js');
+        // Requirements::javascript(FRAMEWORK_ADMIN_DIR . '/javascript/ssui.core.js');
 
-        Requirements::combine_files('uploadfield.js', array(
-            'skywest/ss-gallery: client/javascript-templates/tmpl.js',
-            'skywest/ss-gallery: client/javascript-loadimage/load-image.js',
-            'skywest/ss-gallery: client/jquery-fileupload/jquery.iframe-transport.js',
-            'skywest/ss-gallery: client/jquery-fileupload/cors/jquery.xdr-transport.js',
-            'skywest/ss-gallery: client/jquery-fileupload/jquery.fileupload.js',
-            'skywest/ss-gallery: client/jquery-fileupload/jquery.fileupload-ui.js',
-            FRAMEWORK_DIR . '/javascript/UploadField_uploadtemplate.js',
-            FRAMEWORK_DIR . '/javascript/UploadField_downloadtemplate.js',
-            FRAMEWORK_DIR . '/javascript/UploadField.js',
-        ));
+        // Requirements::combine_files('uploadfield.js', array(
+        //     'skywest/ss-gallery: client/javascript-templates/tmpl.js',
+        //     'skywest/ss-gallery: client/javascript-loadimage/load-image.js',
+        //     'skywest/ss-gallery: client/jquery-fileupload/jquery.iframe-transport.js',
+        //     'skywest/ss-gallery: client/jquery-fileupload/cors/jquery.xdr-transport.js',
+        //     'skywest/ss-gallery: client/jquery-fileupload/jquery.fileupload.js',
+        //     'skywest/ss-gallery: client/jquery-fileupload/jquery.fileupload-ui.js',
+        //     'silverstripe/framework: /javascript/UploadField_uploadtemplate.js',
+        //     'silverstripe/framework: /javascript/UploadField_downloadtemplate.js',
+        //     'silverstripe/framework: /javascript/UploadField.js',
+        // ));
 
         // Requirements::javascript('skywest/ss-gallery: client/jquery/jquery.js');
-        Requirements::javascript('skywest/ss-gallery: client/javascript/GalleryUploadField.js');
+        // Requirements::javascript('skywest/ss-gallery: client/javascript/GalleryUploadField.js');
 
-        Requirements::css('skywest/ss-gallery: client/jquery-ui-themes/smoothness/jquery-ui.css'); // TODO hmmm, remove it?
-        Requirements::css(FRAMEWORK_DIR . '/css/UploadField.css');
-        Requirements::css('skywest/ss-gallery: client/css/GalleryUploadField.css');
+        // Requirements::css('skywest/ss-gallery: client/jquery-ui-themes/smoothness/jquery-ui.css'); // TODO hmmm, remove it?
+        // Requirements::css('silverstripe/framework: /css/UploadField.css');
+        // Requirements::css('skywest/ss-gallery: client/css/GalleryUploadField.css');
 
         $allowedMaxFileNumber = $this->getAllowedMaxFileNumber();
         $config = array(
@@ -222,7 +223,7 @@ class GalleryUploadField extends UploadField
                 $top = (is_numeric($top)) ? $top + 1 : 1;
 
                 $record->{$name}()->add($file, array('SortOrder' => $top));
-            } elseif ($record->has_one($name)) {
+            } elseif ($record->hasOne($name)) {
                 $record->{$name . 'ID'} = $file->ID;
                 $record->write();
             }
@@ -240,7 +241,7 @@ class GalleryUploadField extends UploadField
         $record = $this->getRecord();
         $fieldName = $this->getName();
         return ($record
-            && ($record->has_one($fieldName) || $record->has_many($fieldName) || $record->many_many($fieldName)));
+            && ($record->hasOne($fieldName) || $record->has_many($fieldName) || $record->many_many($fieldName)));
     }
 
     /**

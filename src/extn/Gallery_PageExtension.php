@@ -14,25 +14,32 @@ class Gallery_PageExtension extends DataExtension
         'Images' => Image::class
     );
 
-    public function updateCMSFields(FieldList $fields)
-    {
+    private static $has_one = [
 
-        $fields->addFieldToTab('Root.Gallery', GalleryUploadField::create(
-            'Images',
-            '',
-            $this->owner->OrderedImages()
-        ));
-    }
+    ];
 
-    public function OrderedImages()
-    {
-        dump($this->owner->manyMany(), $Images = array_pad($this->owner->manyMany('Images'), 5, null));
-        list($parentClass, $componentClass, $parentField, $componentField, $table) = $Images;
+    // public function updateCMSFields(FieldList $fields)
+    // {
 
-        return $this->owner->getManyManyComponents(
-            'Images',
-            '',
-            "\"{$table}\".\"SortOrder\" ASC"
-        );
-    }
+    //     $fields->addFieldToTab('Root.Gallery', GalleryUploadField::create(
+    //         'Images',
+    //         '',
+    //         $this->owner->OrderedImages()
+    //     ));
+    // }
+
+    // public function OrderedImages()
+    // {
+    //     // dump($this->owner->manyMany());
+    //     $Images = array_pad($this->owner->manyMany('Images'), 5, null);
+    //     list($parentClass, $componentClass, $parentField, $componentField, $table) = $Images;
+
+    //     return $this->owner->manyMany('Images') ?: null;
+
+    //     // return $this->owner->getManyManyComponents(
+    //     //     'Images',
+    //     //     '',
+    //     //     "\"{$table}\".\"SortOrder\" ASC"
+    //     // );
+    // }
 }
